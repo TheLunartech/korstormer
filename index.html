@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0MST39HZXP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+      gtag("config", "G-0MST39HZXP");
+
+      // Track clicks on JavaScript-powered WhatsApp buttons and other
+      // external links without changing the website's existing scripts.
+      document.addEventListener(
+        "click",
+        function (event) {
+          const link = event.target.closest?.("a");
+
+          if (!link) {
+            return;
+          }
+
+          if (link.classList.contains("wa")) {
+            gtag("event", "whatsapp_click", {
+              contact_method: "WhatsApp",
+              link_text: link.textContent.trim(),
+              button_message: link.dataset.msg || "",
+            });
+
+            return;
+          }
+
+          const destination = new URL(link.href, window.location.href);
+          const isOutboundLink =
+            destination.protocol.startsWith("http") &&
+            destination.hostname !== window.location.hostname;
+
+          if (isOutboundLink) {
+            gtag("event", "outbound_click", {
+              link_url: destination.href,
+              link_domain: destination.hostname,
+              link_text: link.textContent.trim(),
+            });
+          }
+        },
+        true,
+      );
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Korstomer — subscriptions, advertising, social media management and creative production in Accra, Ghana."
+    />
+    <meta name="theme-color" content="#070708" />
+    <title>Korstomer | Subscriptions. Advertising. Content. Growth.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.simpleicons.org" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Manrope:wght@600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Primary navigation -->
+    <nav aria-label="Primary navigation">
+      <a href="#top" class="brand"
+        ><img src="assets/korstomer-icon.svg" alt="Korstomer logo" /><span
+          >KORSTO<b>MER</b></span
+        ></a
+      >
+      <div class="navlinks">
+        <a href="#subscriptions">Subscriptions</a
+        ><a href="#business">Social Media</a><a href="#ads">Advertising</a
+        ><a href="#creative">Production</a><a href="#contact">Contact</a>
+      </div>
+      <a
+        href="#"
+        class="navcta wa"
+        data-msg="Hi Korstomer, I visited your website and would like to talk to your team."
+        ><img src="https://cdn.simpleicons.org/whatsapp/111111" alt="" />
+        <span>Talk to us</span></a
+      >
+    </nav>
+
+    <!-- Main content -->
+    <main id="top">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="wrap heroGrid">
+          <div>
+            <div class="eyebrow">
+              <span class="pulse"></span> Santa Maria, Accra · Digital services
+              made simple
+            </div>
+            <h1>
+              More customers.<br /><span class="red">More possibilities.</span>
+            </h1>
+            <p class="lead">
+              Premium subscriptions, social media management, digital
+              advertising and creative production — brought together in one
+              bold, simple Korstomer experience.
+            </p>
+            <div class="heroBtns">
+              <a href="#subscriptions" class="btn primary"
+                >Explore services →</a
+              >
+              <a
+                href="#"
+                class="btn ghost wa"
+                data-msg="Hi Korstomer, I would like help choosing the right service for me or my business."
+                ><img
+                  src="https://cdn.simpleicons.org/whatsapp/25D366"
+                  alt=""
+                />
+                Let’s talk</a
+              >
+            </div>
+            <div class="trustRow">
+              <div class="trustDots">
+                <span
+                  ><img
+                    src="https://cdn.simpleicons.org/spotify/1ED760"
+                    alt="Spotify" /></span
+                ><span
+                  ><img
+                    src="https://cdn.simpleicons.org/apple/FFFFFF"
+                    alt="Apple" /></span
+                ><span
+                  ><img
+                    src="https://cdn.simpleicons.org/primevideo/00A8E1"
+                    alt="Prime Video" /></span
+                ><span
+                  ><img
+                    src="https://cdn.simpleicons.org/googleads/4285F4"
+                    alt="Google Ads"
+                /></span>
+              </div>
+              <span
+                >Subscriptions + business growth services in one place.</span
+              >
+            </div>
+          </div>
+
+          <div class="showcase">
+            <div class="glassStage">
+              <div class="photoCard">
+                <img
+                  src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+                  alt="Creative production and event content"
+                />
+                <div class="photoText">
+                  <small>Creative production</small
+                  ><b>Make the brand impossible to ignore.</b>
+                </div>
+              </div>
+              <div class="floatingCard serviceFloat">
+                <h4>Everything in one place</h4>
+                <div class="brandMini">
+                  <span
+                    ><img
+                      src="https://cdn.simpleicons.org/spotify/1ED760"
+                      alt="" /></span
+                  ><span
+                    ><img
+                      src="https://cdn.simpleicons.org/apple/FFFFFF"
+                      alt="" /></span
+                  ><span
+                    ><img
+                      src="https://cdn.simpleicons.org/primevideo/00A8E1"
+                      alt="" /></span
+                  ><span
+                    ><img
+                      src="https://cdn.simpleicons.org/youtube/FF0000"
+                      alt="" /></span
+                  ><span
+                    ><img
+                      src="https://cdn.simpleicons.org/googleads/4285F4"
+                      alt="" /></span
+                  ><span
+                    ><img
+                      src="https://cdn.simpleicons.org/whatsapp/25D366"
+                      alt=""
+                  /></span>
+                </div>
+              </div>
+              <div class="floatingCard metricFloat">
+                <small>Built for growth</small><b>Connect. Create. Grow.</b
+                ><em>● Ready when you are</em>
+              </div>
+              <div class="floatingCard messageFloat">
+                <div class="waIcon">
+                  <img
+                    src="https://cdn.simpleicons.org/whatsapp/25D366"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <strong>Talk to Korstomer</strong
+                  ><span>Choose a service. We handle the next step.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Animated services rail -->
+      <div class="logoRail"><div class="rail" id="brandRail"></div></div>
+
+      <!-- Subscription plans -->
+      <section id="subscriptions">
+        <div class="wrap">
+          <div class="sectionHead">
+            <div>
+              <div class="kicker">Premium subscriptions</div>
+              <h2>
+                Your favourite platforms, one clean place to request them.
+              </h2>
+            </div>
+            <p>
+              Choose an available subscription or request a quote for services
+              marked Coming Soon. We confirm availability before payment.
+            </p>
+          </div>
+          <div class="grid4">
+            <article class="card">
+              <div class="brandMark">
+                <img
+                  src="https://cdn.simpleicons.org/spotify/1ED760"
+                  alt="Spotify"
+                />
+              </div>
+              <h3>Spotify Premium</h3>
+              <p>
+                Enjoy ad-free music, downloads and the Premium listening
+                experience.
+              </p>
+              <div class="price">GH₵15</div>
+              <div class="sub">1 month · GH₵40 / 3 months</div>
+              <a
+                class="btn primary wa"
+                href="#"
+                data-msg="Hi Korstomer, I want Spotify Premium. Please confirm availability for 1 month or 3 months."
+                >Get Spotify</a
+              >
+            </article>
+            <article class="card">
+              <div class="brandMark">
+                <img
+                  src="https://cdn.simpleicons.org/apple/FFFFFF"
+                  alt="Apple Music"
+                />
+              </div>
+              <h3>Apple Music</h3>
+              <p>
+                Premium music streaming across your compatible Apple and Android
+                devices.
+              </p>
+              <div class="price">GH₵20</div>
+              <div class="sub">1 month · GH₵55 / 3 months</div>
+              <a
+                class="btn primary wa"
+                href="#"
+                data-msg="Hi Korstomer, I want Apple Music. Please confirm availability for 1 month or 3 months."
+                >Get Apple Music</a
+              >
+            </article>
+            <article class="card">
+              <div class="brandMark">
+                <img
+                  src="https://cdn.simpleicons.org/primevideo/00A8E1"
+                  alt="Prime Video"
+                />
+              </div>
+              <h3>Prime Video</h3>
+              <p>
+                Movies, series and Prime originals for your entertainment setup.
+              </p>
+              <div class="price">GH₵20</div>
+              <div class="sub">1 month · GH₵55 / 3 months</div>
+              <a
+                class="btn primary wa"
+                href="#"
+                data-msg="Hi Korstomer, I want Prime Video. Please confirm availability for 1 month or 3 months."
+                >Get Prime Video</a
+              >
+            </article>
+            <article class="card">
+              <div class="brandMark">
+                <img
+                  src="https://cdn.simpleicons.org/appletv/FFFFFF"
+                  alt="Apple TV"
+                />
+              </div>
+              <h3>Apple TV</h3>
+              <p>Apple Originals and premium entertainment through Apple TV.</p>
+              <div class="price">GH₵25</div>
+              <div class="sub">1 month · GH₵65 / 3 months</div>
+              <a
+                class="btn primary wa"
+                href="#"
+                data-msg="Hi Korstomer, I want Apple TV. Please confirm availability for 1 month or 3 months."
+                >Get Apple TV</a
+              >
+            </article>
+
+            <article class="card">
+              <span class="coming">Coming soon</span>
+              <div class="brandMark">
+                <img
+                  src="https://cdn.simpleicons.org/netflix/E50914"
+                  alt="Netflix"
+                />
+              </div>
+              <h3>Netflix</h3>
+              <p>
+                Tell us the plan and duration you need. We’ll check current
+                availability and quote you.
+              </p>
+              <div class="price">Quote</div>
+              <div class="sub">Availability confirmed on request</div>
+              <a
+                class="btn ghost wa"
+                href="#"
+                data-msg="Hi Korstomer, I would like a quote for Netflix. Please confirm what is currently available."
+                >Request a Quote</a
+              >
+            </article>
+            <article class="card">
+              <span class="coming">Coming soon</span>
+              <div class="brandMark">
+                <img
+                  src="https://cdn.simpleicons.org/youtube/FF0000"
+                  alt="YouTube Premium"
+                />
+              </div>
+              <h3>YouTube Premium</h3>
+              <p>
+                Request current availability and pricing for YouTube Premium.
+              </p>
+              <div class="price">Quote</div>
+              <div class="sub">Availability confirmed on request</div>
+              <a
+                class="btn ghost wa"
+                href="#"
+                data-msg="Hi Korstomer, I would like a quote for YouTube Premium."
+                >Request a Quote</a
+              >
+            </article>
+            <article class="card">
+              <span class="coming">Coming soon</span>
+              <div class="brandMark">
+                <img
+                  src="https://cdn.simpleicons.org/canva/00C4CC"
+                  alt="Canva"
+                />
+              </div>
+              <h3>Canva</h3>
+              <p>
+                Design and creator access. Request a quote while we confirm the
+                best available option.
+              </p>
+              <div class="price">Quote</div>
+              <div class="sub">Availability confirmed on request</div>
+              <a
+                class="btn ghost wa"
+                href="#"
+                data-msg="Hi Korstomer, I would like a quote for Canva."
+                >Request a Quote</a
+              >
+            </article>
+            <article class="card">
+              <span class="coming">Coming soon</span>
+              <div class="brandMark darkLogo">
+                <img
+                  src="https://cdn.simpleicons.org/capcut/000000"
+                  alt="CapCut"
+                />
+              </div>
+              <h3>CapCut</h3>
+              <p>
+                Video creation and editing access. Request a quote and we’ll
+                confirm current options.
+              </p>
+              <div class="price">Quote</div>
+              <div class="sub">Availability confirmed on request</div>
+              <a
+                class="btn ghost wa"
+                href="#"
+                data-msg="Hi Korstomer, I would like a quote for CapCut."
+                >Request a Quote</a
+              >
+            </article>
+            <article class="card">
+              <span class="coming">Coming soon</span>
+              <div class="brandMark">
+                <img
+                  src="https://cdn.simpleicons.org/audiomack/FFA200"
+                  alt="Audiomack"
+                />
+              </div>
+              <h3>Audiomack+</h3>
+              <p>
+                Request pricing and availability for your preferred Audiomack+
+                duration.
+              </p>
+              <div class="price">Quote</div>
+              <div class="sub">Availability confirmed on request</div>
+              <a
+                class="btn ghost wa"
+                href="#"
+                data-msg="Hi Korstomer, I would like a quote for Audiomack+."
+                >Request a Quote</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social media management -->
+      <section id="business">
+        <div class="wrap">
+          <div class="sectionHead">
+            <div>
+              <div class="kicker">Social media management</div>
+              <h2>Build a brand people remember.</h2>
+            </div>
+            <p>
+              Consistent content across TikTok, Facebook and Instagram, with a
+              six-month minimum engagement so there is enough time to plan, test
+              and improve.
+            </p>
+          </div>
+          <div class="mediaFeature">
+            <div class="visual">
+              <img
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+                alt="Creative team working"
+              />
+              <div class="visualCopy">
+                <div class="kicker">Content that feels intentional</div>
+                <h3>Not just posting. Brand building.</h3>
+                <p>
+                  Graphics, video, scheduling and monthly planning designed to
+                  keep your business active and recognizable.
+                </p>
+                <div class="pillRow">
+                  <span class="pill">TikTok</span
+                  ><span class="pill">Instagram</span
+                  ><span class="pill">Facebook</span
+                  ><span class="pill">Monthly planning</span>
+                </div>
+              </div>
+            </div>
+            <div class="stack">
+              <article class="bigCard">
+                <div class="kicker">BrandBuilder</div>
+                <h3>GH₵7,000 / 6 months</h3>
+                <p>
+                  3 professional graphic posts + 2 promotional videos weekly,
+                  adapted and published across TikTok, Facebook and Instagram.
+                </p>
+                <div class="pricingList">
+                  <div class="pricingRow">
+                    <span>Approx. monthly content</span><b>20 pieces</b>
+                  </div>
+                  <div class="pricingRow">
+                    <span>12-month engagement</span><b>GH₵14,000</b>
+                  </div>
+                </div>
+                <a
+                  href="#"
+                  class="btn primary wa"
+                  data-msg="Hi Korstomer, I'm interested in the BrandBuilder social media package (GH₵7,000 / 6 months)."
+                  >Start BrandBuilder</a
+                >
+                <div class="number">01</div>
+              </article>
+              <article class="bigCard">
+                <div class="kicker">SocialBoost</div>
+                <h3>GH₵8,500 / 6 months</h3>
+                <p>
+                  4 graphic posts + 2 promotional videos weekly, captions and
+                  hashtag optimization, scheduling, monthly content calendar and
+                  monthly performance report.
+                </p>
+                <div class="pricingList">
+                  <div class="pricingRow">
+                    <span>Approx. monthly content</span><b>24–26 pieces</b>
+                  </div>
+                  <div class="pricingRow">
+                    <span>12-month engagement</span><b>GH₵17,000</b>
+                  </div>
+                </div>
+                <a
+                  href="#"
+                  class="btn primary wa"
+                  data-msg="Hi Korstomer, I'm interested in the SocialBoost package (GH₵8,500 / 6 months)."
+                  >Start SocialBoost</a
+                >
+                <div class="number">02</div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Digital advertising -->
+      <section id="ads">
+        <div class="wrap">
+          <div class="sectionHead">
+            <div>
+              <div class="kicker">Digital advertising</div>
+              <h2>Put your business in front of people ready to act.</h2>
+            </div>
+            <p>
+              Search, video and Click-to-WhatsApp campaigns with clear budget
+              options, targeting, monitoring and reporting.
+            </p>
+          </div>
+          <div class="adGrid">
+            <article class="adCard">
+              <div class="adHead">
+                <div class="adLogo">
+                  <img
+                    src="https://cdn.simpleicons.org/googleads/4285F4"
+                    alt="Google Ads"
+                  />
+                </div>
+                <h3>Google Search Ads</h3>
+              </div>
+              <p>
+                High-intent search campaigns designed for visibility, leads and
+                customer discovery.
+              </p>
+              <div class="pricingList">
+                <div class="pricingRow"><span>Starter</span><b>GH₵800</b></div>
+                <div class="pricingRow"><span>Basic</span><b>GH₵1,500</b></div>
+                <div class="pricingRow"><span>Growth</span><b>GH₵2,800</b></div>
+                <div class="pricingRow">
+                  <span>Business+</span><b>GH₵6,500+</b>
+                </div>
+              </div>
+              <a
+                href="#"
+                class="btn primary wa"
+                data-msg="Hi Korstomer, I want to run Google Search Ads. Please recommend the right package for my business."
+                >Plan Google Ads</a
+              >
+            </article>
+            <article class="adCard">
+              <div class="adHead">
+                <div class="adLogo">
+                  <img
+                    src="https://cdn.simpleicons.org/youtube/FF0000"
+                    alt="YouTube"
+                  />
+                </div>
+                <h3>YouTube Ads</h3>
+              </div>
+              <p>
+                Skippable in-stream and in-feed campaigns for targeted awareness
+                and video reach.
+              </p>
+              <div class="pricingList">
+                <div class="pricingRow">
+                  <span>1,000+ est. views</span><b>GH₵860</b>
+                </div>
+                <div class="pricingRow"><span>2,000+</span><b>GH₵1,620</b></div>
+                <div class="pricingRow"><span>5,000+</span><b>GH₵3,800</b></div>
+                <div class="pricingRow">
+                  <span>10,000+</span><b>GH₵7,300</b>
+                </div>
+              </div>
+              <a
+                href="#"
+                class="btn primary wa"
+                data-msg="Hi Korstomer, I want to run YouTube Ads. Please recommend a package."
+                >Plan YouTube Ads</a
+              >
+            </article>
+            <article class="adCard">
+              <div class="adHead">
+                <div class="adLogo">
+                  <img
+                    src="https://cdn.simpleicons.org/whatsapp/25D366"
+                    alt="WhatsApp"
+                  />
+                </div>
+                <h3>WhatsApp Growth</h3>
+              </div>
+              <p>
+                Facebook and Instagram campaigns that send interested customers
+                directly into your WhatsApp inbox.
+              </p>
+              <div class="pricingList">
+                <div class="pricingRow"><span>Starter</span><b>GH₵500</b></div>
+                <div class="pricingRow"><span>Basic</span><b>GH₵1,000</b></div>
+                <div class="pricingRow"><span>Growth</span><b>GH₵2,000</b></div>
+                <div class="pricingRow">
+                  <span>Business+</span><b>GH₵5,000+</b>
+                </div>
+              </div>
+              <a
+                href="#"
+                class="btn primary wa"
+                data-msg="Hi Korstomer, I want a WhatsApp Growth Campaign for my business. Please assess my business and recommend a budget."
+                >Start WhatsApp Growth</a
+              >
+            </article>
+          </div>
+          <p class="adDisclaimer">
+            Advertising results are estimates, not guarantees. Reach, clicks,
+            messages, views and sales vary by audience, industry, creative,
+            competition, budget and campaign performance.
+          </p>
+        </div>
+      </section>
+
+      <!-- Creative production -->
+      <section id="creative">
+        <div class="wrap">
+          <div class="sectionHead">
+            <div>
+              <div class="kicker">Creative & production</div>
+              <h2>Give your campaign something worth watching.</h2>
+            </div>
+            <p>
+              When you need more than a template, Korstomer can coordinate
+              camera production, drone work, photography, editing, jingles and
+              voice-over.
+            </p>
+          </div>
+          <div class="mediaFeature">
+            <div class="visual">
+              <img
+                src="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+                alt="Professional camera production"
+              />
+              <div class="visualCopy">
+                <div class="kicker">Visual production</div>
+                <h3>Camera. Drone. Content.</h3>
+                <p>
+                  Professional content designed around your campaign, audience
+                  and platform.
+                </p>
+                <div class="pillRow">
+                  <span class="pill">Photography</span
+                  ><span class="pill">Videography</span
+                  ><span class="pill">Drone</span
+                  ><span class="pill">Editing</span
+                  ><span class="pill">Commercials</span>
+                </div>
+              </div>
+            </div>
+            <div class="stack">
+              <article class="bigCard">
+                <div class="kicker">Professional content</div>
+                <h3>Production built around the brief.</h3>
+                <p>
+                  On-location shoots, product photography, promotional videos,
+                  event coverage and full post-production.
+                </p>
+                <a
+                  href="#"
+                  class="btn primary wa"
+                  data-msg="Hi Korstomer, I need a quote for professional content production. Please help me plan the shoot."
+                  >Request Production Quote</a
+                >
+                <div class="number">K</div>
+              </article>
+              <article class="bigCard">
+                <div class="kicker">Audio & creative</div>
+                <h3>Sound that carries the brand.</h3>
+                <p>
+                  Commercial jingles, campaign audio, professional voice-over,
+                  creative concepts and complete content campaigns.
+                </p>
+                <a
+                  href="#"
+                  class="btn primary wa"
+                  data-msg="Hi Korstomer, I need a quote for a jingle, voice-over or audio creative project."
+                  >Request Audio Quote</a
+                >
+                <div class="number">A</div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section>
+        <div class="wrap">
+          <div class="sectionHead">
+            <div>
+              <div class="kicker">How it works</div>
+              <h2>Simple from the first click.</h2>
+            </div>
+            <p>
+              No complicated checkout. Every booking comes directly to Korstomer
+              on WhatsApp, then we confirm and initiate payment.
+            </p>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div class="stepNum">01</div>
+              <h4>Choose</h4>
+              <p>
+                Select the subscription, campaign or creative service you need.
+              </p>
+            </div>
+            <div class="step">
+              <div class="stepNum">02</div>
+              <h4>Talk to us</h4>
+              <p>
+                Your chosen service is automatically included in your WhatsApp
+                message.
+              </p>
+            </div>
+            <div class="step">
+              <div class="stepNum">03</div>
+              <h4>We confirm</h4>
+              <p>
+                We confirm availability, requirements, timeline and your total
+                amount.
+              </p>
+            </div>
+            <div class="step">
+              <div class="stepNum">04</div>
+              <h4>Pay & start</h4>
+              <p>
+                We send payment instructions and begin activation or onboarding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Frequently asked questions -->
+      <section>
+        <div class="wrap">
+          <div class="sectionHead">
+            <div>
+              <div class="kicker">Frequently asked questions</div>
+              <h2>Clear before you commit.</h2>
+            </div>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>Do I pay directly on the website?</summary>
+              <p>
+                No. Send your request through WhatsApp first. Korstomer confirms
+                availability, requirements and the final amount before sending
+                payment instructions.
+              </p>
+            </details>
+            <details>
+              <summary>How quickly are subscriptions activated?</summary>
+              <p>
+                Activation time depends on the requested service and current
+                availability. You will be given a timeframe before payment.
+              </p>
+            </details>
+            <details>
+              <summary>Do you guarantee advertising results?</summary>
+              <p>
+                No responsible agency can guarantee sales, messages or clicks.
+                We plan, target, monitor and optimize campaigns, while actual
+                performance depends on the market, creative, audience,
+                competition and budget.
+              </p>
+            </details>
+            <details>
+              <summary>Can you create content for my ads?</summary>
+              <p>
+                Yes. Professional photo, video, drone, editing, voice-over and
+                jingle production are available as separate quoted services.
+              </p>
+            </details>
+            <details>
+              <summary>Where is Korstomer located?</summary>
+              <p>
+                Santa Maria, Accra, Ghana. Most enquiries and onboarding can
+                also be handled remotely through WhatsApp and email.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact call to action -->
+      <section id="contact">
+        <div class="wrap">
+          <div class="ctaPanel">
+            <h2>Tell us what you need. We’ll take it from there.</h2>
+            <p>
+              Subscriptions, advertising, social media management or creative
+              production — send a WhatsApp message and Korstomer will guide the
+              next step.
+            </p>
+            <a
+              href="#"
+              class="btn wa"
+              data-msg="Hi Korstomer, I visited your website and would like to discuss a service."
+              ><img src="https://cdn.simpleicons.org/whatsapp/111111" alt="" />
+              Talk to Korstomer →</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Site footer -->
+    <footer>
+      <div class="footerMotion">
+        <div class="track"></div>
+        <div class="iconsMove" id="footerIcons"></div>
+      </div>
+      <div class="wrap footerTop">
+        <div>
+          <a class="brand" href="#top"
+            ><img src="assets/korstomer-icon.svg" alt="Korstomer" /><span
+              >KORSTO<b>MER</b></span
+            ></a
+          >
+          <p>
+            Subscriptions. Advertising. Content. Growth. A simple
+            digital-services platform built to help individuals and businesses
+            do more online.
+          </p>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <a href="mailto:korstomer@gmail.com">korstomer@gmail.com</a
+          ><a
+            href="#"
+            class="wa"
+            data-msg="Hi Korstomer, I would like to make an enquiry."
+            >059 404 5086</a
+          ><span class="footerText">Santa Maria, Accra</span>
+        </div>
+        <div>
+          <h5>Explore</h5>
+          <a href="#subscriptions">Subscriptions</a
+          ><a href="#business">Social Management</a
+          ><a href="#ads">Advertising</a
+          ><a href="#creative">Creative & Production</a>
+        </div>
+      </div>
+      <div class="wrap footerBottom">
+        <span>© <span id="year"></span> Korstomer. All rights reserved.</span
+        ><span>Ghana · Africa · The World</span>
+      </div>
+    </footer>
+    <!-- Floating WhatsApp contact button -->
+    <a
+      href="#"
+      class="waFloat wa"
+      aria-label="Talk to Korstomer on WhatsApp"
+      data-msg="Hi Korstomer, I have an enquiry."
+      ><span class="bubble"
+        ><img src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt=""
+      /></span>
+      Talk to us</a
+    >
+    <script src="script.js"></script>
+  </body>
+</html>
