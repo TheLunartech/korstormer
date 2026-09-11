@@ -20,7 +20,7 @@ const BRANDS = [
   },
   {
     name: "Prime Video",
-    iconUrl: "https://cdn.simpleicons.org/primevideo/00A8E1",
+    iconUrl: "assets/logos/prime-video.svg",
   },
   {
     name: "Apple TV",
@@ -44,11 +44,11 @@ const BRANDS = [
   },
   {
     name: "Canva",
-    iconUrl: "https://cdn.simpleicons.org/canva/00C4CC",
+    iconUrl: "assets/logos/canva.svg",
   },
   {
     name: "CapCut",
-    iconUrl: "https://cdn.simpleicons.org/capcut/000000",
+    iconUrl: "assets/logos/capcut.svg",
     needsLightBackground: true,
   },
   {

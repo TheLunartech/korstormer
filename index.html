@@ -69,16 +69,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Manrope:wght@600;700;800&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260911-2" />
   </head>
   <body>
     <!-- Primary navigation -->
     <nav aria-label="Primary navigation">
-      <a href="#top" class="brand"
-        ><img src="assets/korstomer-icon.svg" alt="Korstomer logo" /><span
-          >KORSTO<b>MER</b></span
-        ></a
-      >
+      <a href="#top" class="brand" aria-label="Korstomer home">
+        <img src="assets/korstomer-logo.png" alt="Korstomer logo" />
+      </a>
       <div class="navlinks">
         <a href="#subscriptions">Subscriptions</a
         ><a href="#business">Social Media</a><a href="#ads">Advertising</a
@@ -89,7 +87,7 @@
         class="navcta wa"
         data-msg="Hi Korstomer, I visited your website and would like to talk to your team."
         ><img src="https://cdn.simpleicons.org/whatsapp/111111" alt="" />
-        <span>Talk to us</span></a
+        <span>Talk to Us</span></a
       >
     </nav>
 
@@ -97,24 +95,35 @@
     <main id="top">
       <!-- Hero -->
       <section class="hero">
+        <video
+          class="heroVideo"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <!-- Add your own video at assets/hero-video.mp4 -->
+          <source src="assets/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div class="heroVideoOverlay" aria-hidden="true"></div>
+
         <div class="wrap heroGrid">
-          <div>
+          <div class="heroCopy">
             <div class="eyebrow">
-              <span class="pulse"></span> Santa Maria, Accra · Digital services
-              made simple
+              <span class="pulse"></span> Premium subscriptions
+              growth
             </div>
             <h1>
-              More customers.<br /><span class="red">More possibilities.</span>
+              <span class="heroLine">More customers.</span>
+              <span class="red heroLine">More possibilities.</span>
             </h1>
             <p class="lead">
-              Premium subscriptions, social media management, digital
-              advertising and creative production — brought together in one
-              bold, simple Korstomer experience.
+              Subscriptions, advertising, content & growth, all in one place.
             </p>
             <div class="heroBtns">
-              <a href="#subscriptions" class="btn primary"
-                >Explore services →</a
-              >
+              <a href="#subscriptions" class="btn primary">Explore Services</a>
               <a
                 href="#"
                 class="btn ghost wa"
@@ -123,7 +132,7 @@
                   src="https://cdn.simpleicons.org/whatsapp/25D366"
                   alt=""
                 />
-                Let’s talk</a
+                Talk to Us</a
               >
             </div>
             <div class="trustRow">
@@ -138,7 +147,7 @@
                     alt="Apple" /></span
                 ><span
                   ><img
-                    src="https://cdn.simpleicons.org/primevideo/00A8E1"
+                    src="assets/logos/prime-video.svg"
                     alt="Prime Video" /></span
                 ><span
                   ><img
@@ -146,57 +155,53 @@
                     alt="Google Ads"
                 /></span>
               </div>
-              <span
-                >Subscriptions + business growth services in one place.</span
-              >
+              <span>Streaming · Advertising · Creative</span>
             </div>
           </div>
 
           <div class="showcase">
             <div class="glassStage">
-              <div class="photoCard">
+              <div class="photoCard productVisual">
                 <img
-                  src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
-                  alt="Creative production and event content"
+                  src="assets/korstomer-logo.png"
+                  alt="Korstomer digital services"
                 />
                 <div class="photoText">
-                  <small>Creative production</small
-                  ><b>Make the brand impossible to ignore.</b>
+                  <small>Digital services</small><b>One place.</b>
                 </div>
               </div>
               <div class="floatingCard serviceFloat">
-                <h4>Everything in one place</h4>
+                <h4>Streaming · Ads · Creative</h4>
                 <div class="brandMini">
                   <span
                     ><img
                       src="https://cdn.simpleicons.org/spotify/1ED760"
-                      alt="" /></span
+                      alt="Spotify" /></span
                   ><span
                     ><img
                       src="https://cdn.simpleicons.org/apple/FFFFFF"
-                      alt="" /></span
+                      alt="Apple" /></span
                   ><span
                     ><img
-                      src="https://cdn.simpleicons.org/primevideo/00A8E1"
-                      alt="" /></span
+                      src="assets/logos/prime-video.svg"
+                      alt="Prime Video" /></span
                   ><span
                     ><img
                       src="https://cdn.simpleicons.org/youtube/FF0000"
-                      alt="" /></span
+                      alt="YouTube" /></span
                   ><span
                     ><img
                       src="https://cdn.simpleicons.org/googleads/4285F4"
-                      alt="" /></span
+                      alt="Google Ads" /></span
                   ><span
                     ><img
                       src="https://cdn.simpleicons.org/whatsapp/25D366"
-                      alt=""
+                      alt="WhatsApp" /></span
+                  ><span><img src="assets/logos/canva.svg" alt="Canva" /></span
+                  ><span class="darkLogo"
+                    ><img src="assets/logos/capcut.svg" alt="CapCut"
                   /></span>
                 </div>
-              </div>
-              <div class="floatingCard metricFloat">
-                <small>Built for growth</small><b>Connect. Create. Grow.</b
-                ><em>● Ready when you are</em>
               </div>
               <div class="floatingCard messageFloat">
                 <div class="waIcon">
@@ -206,8 +211,7 @@
                   />
                 </div>
                 <div>
-                  <strong>Talk to Korstomer</strong
-                  ><span>Choose a service. We handle the next step.</span>
+                  <strong>WhatsApp</strong><span>Ready when you are.</span>
                 </div>
               </div>
             </div>
@@ -278,10 +282,7 @@
             </article>
             <article class="card">
               <div class="brandMark">
-                <img
-                  src="https://cdn.simpleicons.org/primevideo/00A8E1"
-                  alt="Prime Video"
-                />
+                <img src="assets/logos/prime-video.svg" alt="Prime Video" />
               </div>
               <h3>Prime Video</h3>
               <p>
@@ -361,10 +362,7 @@
             <article class="card">
               <span class="coming">Coming soon</span>
               <div class="brandMark">
-                <img
-                  src="https://cdn.simpleicons.org/canva/00C4CC"
-                  alt="Canva"
-                />
+                <img src="assets/logos/canva.svg" alt="Canva" />
               </div>
               <h3>Canva</h3>
               <p>
@@ -383,10 +381,7 @@
             <article class="card">
               <span class="coming">Coming soon</span>
               <div class="brandMark darkLogo">
-                <img
-                  src="https://cdn.simpleicons.org/capcut/000000"
-                  alt="CapCut"
-                />
+                <img src="assets/logos/capcut.svg" alt="CapCut" />
               </div>
               <h3>CapCut</h3>
               <p>
@@ -645,7 +640,7 @@
           <div class="mediaFeature">
             <div class="visual">
               <img
-                src="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+                src="assets/dronevid.png"
                 alt="Professional camera production"
               />
               <div class="visualCopy">
@@ -830,11 +825,9 @@
       </div>
       <div class="wrap footerTop">
         <div>
-          <a class="brand" href="#top"
-            ><img src="assets/korstomer-icon.svg" alt="Korstomer" /><span
-              >KORSTO<b>MER</b></span
-            ></a
-          >
+          <a class="brand" href="#top" aria-label="Korstomer home">
+            <img src="assets/korstomer-logo.png" alt="Korstomer logo" />
+          </a>
           <p>
             Subscriptions. Advertising. Content. Growth. A simple
             digital-services platform built to help individuals and businesses

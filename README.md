@@ -8,8 +8,10 @@ change content, design, and behavior without searching through one large block.
 - `index.html` — all visible page content and service sections.
 - `styles.css` — colors, spacing, layout, animations, and mobile styles.
 - `script.js` — WhatsApp settings and the repeated brand lists.
-- `assets/korstomer-icon.svg` — temporary local logo supplied because the
-  original `korstomer-icon.png` was not included with the HTML attachment.
+- `assets/korstomer-logo.png` — your transparent Korstomer logo used in the
+  header and footer.
+- `assets/logos/` — local copies of service logos that are unavailable from the
+  live icon CDN.
 
 ## Most common edits
 
@@ -37,10 +39,16 @@ colors are `--red`, `--red2`, `--bg`, and `--text`.
 Open `script.js` and edit the `BRANDS` array. The same list supplies both the
 moving services rail and the animated footer icons.
 
-### Replace the temporary logo
+### Replace the logo
 
-Replace `assets/korstomer-icon.svg` with your real logo, or update the two logo
-paths in `index.html` if your file has a different name.
+Replace `assets/korstomer-logo.png` with another transparent PNG, or update the
+two logo paths in `index.html` if your file has a different name.
+
+### Change the hero background video
+
+Add your own MP4 file to the `assets` folder and name it `hero-video.mp4`. The
+page is already connected to that path. The existing hero image remains visible
+as a fallback until your video is added.
 
 ## Preview locally
 
